@@ -1,13 +1,22 @@
 
-exports.min = function min (array) {
-    let temp = array[0]
 
+
+exports.min = function min (array) {
+    if (!!array && array.length !== 0) {
+        return Math.min(...array)
+    } else return 0
 }
 
 exports.max = function max (array) {
-  return 0;
+    if (!!array && array.length !== 0) {
+        return Math.max(...array)
+    } else return 0
 }
 
 exports.avg = function avg (array) {
-  return 0;
+    if (!!array && array.length !== 0) {
+        return array.reduce((a, b) => {
+            return a + b
+        }) / array.length
+    } else return 0
 }
